@@ -60,6 +60,20 @@
 			<plugin>
 				<groupId>org.graalvm.buildtools</groupId>
 				<artifactId>native-maven-plugin</artifactId>
+				<configuration>
+					<buildArgs combine.children="append">
+						<buildArg>--no-fallback</buildArg>
+						<buildArg>--verbose</buildArg>
+						<buildArg>-H:+IncludeAllLocales</buildArg>
+						<buildArg>-H:+AddAllCharsets</buildArg>
+						<buildArg>
+							-H:ReflectionConfigurationFiles=src/main/resources/META-INF/native-image/reflect-config.json
+						</buildArg>
+						<buildArg>
+							-H:ResourceConfigurationFiles=src/main/resources/META-INF/native-image/resource-config.json
+						</buildArg>
+					</buildArgs>
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
