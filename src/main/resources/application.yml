@@ -1,0 +1,14 @@
+spring.application.name: demo
+spring:
+  profiles:
+    active: default
+  config:
+    import:
+      - optional:configserver:.
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+    import:
+      - configserver:http://localhost:8088/
