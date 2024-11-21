@@ -1,7 +1,0 @@
-{
-  "bundles": [
-    {
-      "name": "com.ibm.db2.jcc.t2zos.ac"
-    }
-  ]
-}
